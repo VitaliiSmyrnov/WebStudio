@@ -75,9 +75,20 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
@@ -131,6 +142,17 @@ p {
 }
 .logo__foot--white {
   color: var(--white-color);
+}
+
+.burger {
+  fill: var(--main-text-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
 }
 
 .backdrop {
@@ -457,6 +479,12 @@ p {
 
 .header {
   border-bottom: 1px solid var(--nav-border-color);
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: auto;
+  }
 }
 
 .header-wrapper {
@@ -466,16 +494,36 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+@media screen and (mix-width: 1200px) {
+  .header-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+  }
 }
 
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+  display: none;
 }
-
-.header__item:not(:last-child) {
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    margin-left: 93px;
+  }
+}
+.header__nav .header__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -513,15 +561,48 @@ p {
   border-radius: 2px;
 }
 
-.header__link--light {
-  color: var(--light-text-color);
+.header__contacts {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__contacts .header__item:first-child {
+    margin-bottom: 10px;
+  }
+  .header__contacts .header__link[href*=mailto] {
+    padding-top: 18px;
+    padding-bottom: 0px;
+  }
+  .header__contacts .header__link[href*=tel] {
+    padding-bottom: 18px;
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: auto;
+  }
+  .header__contacts .header__item:first-child {
+    margin-right: 30px;
+  }
 }
 
-.header__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+.header__link--light {
+  color: var(--light-text-color);
 }
 
 .header__icon {
@@ -530,8 +611,7 @@ p {
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero.jpg");
@@ -540,25 +620,44 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    min-height: 600px;
+  }
+}
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   color: var(--white-color);
   background-color: var(--footer-bg-color);
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   font-weight: var(--font-w-900);
-  font-size: var(--font-sz-44);
-  line-height: 1.36;
+  font-size: var(--font-sz-26);
+  line-height: 1.62;
   letter-spacing: var(--let-sp06);
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: var(--font-sz-44);
+    line-height: 1.36;
+  }
 }
 
 .features__list {
