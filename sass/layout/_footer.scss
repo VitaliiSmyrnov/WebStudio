@@ -3,14 +3,38 @@
 
    & .container {
     display: flex;
-  }
- }
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        align-items: flex-start;
+        }
+    @media screen and (min-width: 1200px) {
+        flex-wrap: no-wrap; 
+      }  
+   }
+}
  
  .footer__contacts-wrapper {
+   text-align: center;
    padding-top: 60px;
-   margin-right: 70px;
-   width: 231px;
-   height: 252px;
+
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+     margin-left: 76px;
+     margin-right: 165px;
+   }
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-left: 0;
+    margin-right: 70px;
+    width: 231px;
+    height: 192px;
+  }
  }
  
  .footer__contacts {
@@ -44,11 +68,20 @@
  .footer__social-wrapper {
    display: flex;
    flex-direction: column;
+   text-align: center;
  
-   padding-top: 72px;
-   margin-right: 93px;
-   width: 206px;
-   height: 252px;
+   padding-top: 60px;
+  
+   @media screen and (min-width: 768px) {
+    padding-top: 65px;
+  }
+   @media screen and (min-width: 1200px) {
+     padding-top: 72px;
+     margin-right: 93px;
+     max-width: 206px;
+     height: 192px;
+     text-align: start;
+   }
  }
  
  .footer__title {
@@ -64,22 +97,43 @@
   /* subsctiption  ================================ */
  
  .footer__subscription {
-   padding-top: 73px;
-   max-width: 570px;
-   height: 86px;
+   margin-left: auto;
+   margin-right: auto;
+
+   padding-top: 60px;
+   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 73px;
+    max-width: 570px;
+    height: 86px;
+    text-align: start;
+  }
  }
  
  .footer__form {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+  display: block;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
  }
  
  .footer__input {
-   width: 358px;
-   height: 50px;
    padding: 15px 16px;
-   margin-right: 12px;
+   width: 450px;
+   height: 50px;
+   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
    
    font-family: inherit;
    font-size: var(--font-sz-16);
@@ -95,4 +149,3 @@
     color: rgba(255, 255, 255, 0.6);
   }
  }
-  

@@ -1,10 +1,20 @@
 // padding of each section
 
 .section {
-   padding-top: 94px;
-   padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-   &.work {
-    padding-top: 0;
+  &.work {
+    display: none;
    }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+ 
+    &.work {
+     display: block;
+     padding-top: 0;
+    }
+  }
  } 
