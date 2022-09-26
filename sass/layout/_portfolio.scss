@@ -6,9 +6,18 @@
  
 .portfolio__item {
    margin: 15px;
-   width: calc((100% - 90px) / 3);
+   width: calc(100% - 30px);
+   height: auto;
  
    transition: box-shadow var(--time) var(--timing-function);
+
+     @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2);
+     }
+
+     @media screen and (min-width: 1200px) {
+       width: calc((100% - 90px) / 3);
+     }
 
    &:hover,
    &:focus {
@@ -25,6 +34,7 @@
 .portfolio__image {
    display: block;
    width: 100%;
+   height: auto;
  }
  
 .portfolio__sub-image {
@@ -34,7 +44,7 @@
  
    width: 100%;
    height: 100%;
-   padding: 63px 24px;
+   padding: 77px 24px;
  
    font-size: var(--font-sz-18);
    line-height: 1.56;
@@ -46,6 +56,14 @@
    transform: translateY(100%);
    transition: transform var(--time) var(--timing-function),
      opacity var(--time) var(--timing-function);
+
+     @media screen and (min-width: 768px) {
+      padding: 49px 24px 77px;
+     }
+
+     @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+     }
  }
  
 .portfolio__item:hover .portfolio__sub-image,

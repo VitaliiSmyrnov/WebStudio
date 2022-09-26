@@ -1,9 +1,0 @@
-.burger {
-   fill: var(--main-text-color);
-   background-color: transparent;
-   border-color: transparent;
-
-   @media screen and (min-width: 768px) {
-      display: none;
-   }
-}
