@@ -6,13 +6,6 @@
 
    cursor: pointer;
 
-   transition: fill var(--time) var(--timing-function);
-
-   &:hover,
-   &:focus {
-      fill: var(--accent-blue-color);
-   }
-
    @media screen and (min-width: 768px) {
       display: none;
    }
@@ -95,6 +88,7 @@
 
 .mobile__socials {
    display: flex;
+   flex-wrap: wrap;
 
    & .link {
      font-size: var(--font-sz-18);
@@ -121,11 +115,5 @@
    border: none;
  
    cursor: pointer;
-   transition: fill var(--time) var(--timing-function);
-
-   &:hover,
-   &:focus {
-    fill: var(--accent-blue-color);
   }
- }
 

@@ -32,11 +32,17 @@
    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
      0 1px 3px 0 rgba(0, 0, 0, 0.12);
 
-  & > img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-  }
+     
+    }
+    
+.team__image-wrapper {
+  margin-bottom: 30px;
+      
+      & img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
  }
  
  .team__meta-wrapper {
